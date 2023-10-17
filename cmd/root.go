@@ -1,12 +1,10 @@
 /*
-Copyright © 2023 NAME HERE <EMAIL ADDRESS>
-
+Copyright © 2023 Alan Ton (alandgton@gmail.com)
 */
 package cmd
 
 import (
 	"os"
-
 	"github.com/spf13/cobra"
 )
 
@@ -15,16 +13,13 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "resy-sniper",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "CLI to snipe reservations from resy",
+	Long: `Resy Sniper is a tool that devs can use to secure the most
+coveted restaurant reservations.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+The initial plan is to have users provide their login credentials
+(e.g. API key) and have this script run a loop to continuously
+send booking requests to Resy's servers.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
